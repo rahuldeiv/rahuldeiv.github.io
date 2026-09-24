@@ -1,198 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#07111f" />
-    <meta
-      name="description"
-      content="Rahul Deivasigamani's personal website is almost ready."
-    />
-    <title>Rahul Deivasigamani — Coming Soon</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Cpath d='M18 47V17h13.5c7.2 0 11.5 3.8 11.5 9.8 0 4.2-2.3 7.3-6.1 8.7L46 47h-8.3l-7.4-10.2h-4.8V47H18zm7.5-16.4h5.1c3.2 0 4.8-1.2 4.8-3.7 0-2.4-1.6-3.6-4.8-3.6h-5.1v7.3z' fill='%23f4f7fb'/%3E%3C/svg%3E"
-    />
-    <style>
-      :root {
-        color-scheme: dark;
-        font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
-        background: #07111f;
-        color: #f4f7fb;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        min-height: 100%;
-        margin: 0;
-      }
-
-      body {
-        min-height: 100svh;
-        overflow: hidden;
-        background:
-          radial-gradient(circle at 80% 18%, rgba(45, 121, 255, 0.18), transparent 30rem),
-          radial-gradient(circle at 10% 90%, rgba(39, 210, 174, 0.1), transparent 28rem),
-          #07111f;
-      }
-
-      body::before {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        content: "";
-        opacity: 0.22;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-        background-size: 4rem 4rem;
-        mask-image: linear-gradient(to bottom, black, transparent 85%);
-      }
-
-      main {
-        display: grid;
-        min-height: 100svh;
-        padding: clamp(1.5rem, 5vw, 4rem);
-        grid-template-rows: auto 1fr auto;
-      }
-
-      .name {
-        margin: 0;
-        font-size: 0.875rem;
-        font-weight: 650;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .content {
-        align-self: center;
-        width: min(100%, 58rem);
-      }
-
-      .eyebrow {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        margin: 0 0 1.5rem;
-        color: #8da1b8;
-        font-size: 0.875rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .eyebrow::before {
-        width: 2rem;
-        height: 1px;
-        content: "";
-        background: #4d88ff;
-      }
-
-      h1 {
-        max-width: 12ch;
-        margin: 0;
-        font-size: clamp(3.2rem, 10vw, 8.5rem);
-        font-weight: 580;
-        letter-spacing: -0.065em;
-        line-height: 0.94;
-        text-wrap: balance;
-      }
-
-      .accent {
-        color: #72a1ff;
-      }
-
-      .status {
-        max-width: 31rem;
-        margin: clamp(1.75rem, 4vw, 3rem) 0 0;
-        color: #a9b7c9;
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        line-height: 1.7;
-      }
-
-      .progress {
-        position: relative;
-        width: min(100%, 24rem);
-        height: 2px;
-        margin-top: 2rem;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .progress::after {
-        position: absolute;
-        inset: 0;
-        width: 42%;
-        content: "";
-        background: linear-gradient(90deg, #4d88ff, #4fe0c1);
-        animation: refine 2.8s ease-in-out infinite alternate;
-      }
-
-      footer {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        gap: 1rem;
-        color: #66788d;
-        font-size: 0.875rem;
-      }
-
-      footer p {
-        margin: 0;
-      }
-
-      .domain {
-        color: #8da1b8;
-      }
-
-      @keyframes refine {
-        from {
-          transform: translateX(-100%);
-        }
-        to {
-          transform: translateX(240%);
-        }
-      }
-
-      @media (max-width: 40rem) {
-        footer {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .progress::after {
-          width: 72%;
-          animation: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <p class="name">Rahul Deivasigamani</p>
-
-      <section class="content" aria-labelledby="page-title">
-        <p class="eyebrow">Work in progress</p>
-        <h1 id="page-title">Website almost <span class="accent">ready.</span></h1>
-        <p class="status">
-          Fine-tuning the details. Check back soon.
-        </p>
-        <div class="progress" aria-hidden="true"></div>
-      </section>
-
-      <footer>
-        <p>&copy; 2026 Rahul Deivasigamani</p>
-        <p class="domain">rahuldeiv.com</p>
-      </footer>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f3eee4" />
+  <meta name="description" content="Rahul Deivasigamani, MSc student in Cybersecurity & AI at Radboud University. Research in AI security, prompt injection, and LLM watermarking." />
+  <meta property="og:title" content="Rahul Deivasigamani — AI Security Research" />
+  <meta property="og:description" content="AI security research, publications, and projects at the intersection of machine learning and cybersecurity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rahuldeiv.com/" />
+  <link rel="canonical" href="https://rahuldeiv.com/" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Rahul Deivasigamani — AI Security Research</title>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="Rahul Deivasigamani, home">rd<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <h1 id="intro-title">Hello, I’m<br /><em>Rahul Deiv.</em></h1>
+        <p class="full-name">aka Rahul <span class="aka-surname">Deivasigamani</span></p>
+        <p class="intro">Exploring the security of AI systems, from the prompts they read to the traces they leave.</p>
+        <div class="profile-links"><a href="https://www.linkedin.com/in/rahuldeiv/" rel="me" aria-label="LinkedIn profile" title="LinkedIn profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.99 0 3.58 1.97 3.58 4.53v5.24Z"/></svg></a><a href="https://github.com/rahuldeiv" rel="me" aria-label="GitHub profile" title="GitHub profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.3c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg></a><a href="https://x.com/rahuldeiv" rel="me" aria-label="X profile" title="X profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.835L0 1.154h7.594l5.243 6.932 6.064-6.933ZM17.61 20.644h2.039L6.486 3.24H4.298L17.61 20.644Z"/></svg></a><a href="mailto:deiv.rahul@gmail.com" aria-label="Email Rahul" title="Email Rahul"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg></a></div>
+      </div>
+      <figure class="artwork">
+        <div class="art-frame">
+          <span class="art-index" aria-hidden="true">FIG. 01 / AN OPEN QUESTION</span>
+          <img class="art-photo" src="pfp.png" alt="Rahul Deivasigamani posing beside a snowman">
+        </div>
+        <figcaption>A little structure. A little room to wander.</figcaption>
+      </figure>
+      <div class="hero-foot"><span><span class="status-dot" aria-hidden="true"></span> Radboud University · Nijmegen, NL</span><span>Scroll to explore <span aria-hidden="true">↓</span></span></div>
+    </section>
+    <nav class="section-index" aria-label="Portfolio sections">
+      <a href="#about">01 About</a><a href="#news">02 News</a><a href="#publications">03 Publications</a><a href="#work">04 Projects</a><a href="#education">05 Education</a><a href="#experience">06 Experience</a><a href="#certifications">07 Certifications</a><a href="#contact">08 Contact</a>
+    </nav>
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="section-label"><span>01 / INTRODUCTION</span><h2 id="about-title">A bit <em>about me.</em></h2></div>
+      <div class="about-copy">
+        <p class="lead">How do we make intelligent systems more secure?</p>
+        <p>I’m a master’s student in Cybersecurity &amp; AI at Radboud University in Nijmegen, the Netherlands, and a research intern with its Digital Security Group (DiS). My interests lie at the intersection of security and machine learning: AI-driven threats, the vulnerabilities of large language models, and adversarial robustness.</p>
+        <p>My research explores indirect prompt injection in mobile AI agents and the robustness of LLM watermarking against adversarial attacks. Before moving into research, I spent four years at Deloitte Consulting USI developing and maintaining enterprise SAP systems.</p>
+        <p>Off the clock, I enjoy cooking, gaming on my PlayStation 5, and backpacking through new cities.</p>
+        <div class="interest-tags" aria-label="Research interests"><span>AI security</span><span>Prompt injection</span><span>Adversarial robustness</span><span>LLM watermarking</span></div>
+      </div>
+    </section>
+    <section id="news" class="section academic-section" aria-labelledby="news-title">
+      <div class="section-label"><span>02 / UPDATES</span><h2 id="news-title">Recent <em>news.</em></h2></div>
+      <ul class="news-list">
+        <li><span class="entry-date">Aug 2026</span><p>Our paper, <a href="#publications">“Not an A11y”</a>, was accepted to AGENT-SEC @ ACM CCS 2026.</p></li>
+        <li><time class="entry-date" datetime="2026-07">JUL 2026</time><p>Joined the Digital Security Group at Radboud University as a research intern, working on LLM watermarking security.</p></li>
+        <li><time class="entry-date" datetime="2025-08">AUG 2025</time><p>Started my MSc in Cybersecurity &amp; AI at Radboud University.</p></li>
+      </ul>
+    </section>
+    <section id="publications" class="section academic-section" aria-labelledby="publications-title">
+      <div class="section-label"><span>03 / RESEARCH OUTPUT</span><h2 id="publications-title">Selected <em>publications.</em></h2></div>
+      <article class="publication">
+        <div class="publication-meta"><span class="entry-date">2026 · ARXIV PREPRINT</span><span class="acceptance">Accepted · AGENT-SEC @ ACM CCS 2026</span></div>
+        <h3><a href="https://arxiv.org/abs/2608.08939">Not an A11y: How Android Accessibility Exposes Mobile AI Agents to Indirect Prompt Injection</a></h3>
+        <p class="authors"><strong>Rahul Deivasigamani</strong> et al.</p>
+        <p>Investigating how Android accessibility interfaces expose mobile AI agents to indirect prompt injection.</p>
+        <a class="text-link" href="https://arxiv.org/abs/2608.08939">Read the preprint <span aria-hidden="true">↗</span></a>
+      </article>
+    </section>
+    <section id="work" class="section" aria-labelledby="work-title">
+      <div class="section-heading"><div class="section-label"><span>04 / SELECTED PROJECTS</span><h2 id="work-title">Questions into <em>practice.</em></h2></div><p>Security research &amp; machine learning.</p></div>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-visual work-visual-one" aria-hidden="true"><div class="nested nested-one"></div><div class="nested nested-two"></div><div class="nested nested-three"></div><span class="visual-number">01</span></div>
+          <div class="card-meta"><span>AGENTIC AI · SECURITY</span><span>Research project</span></div>
+          <h3>Prompt injection in mobile AI agents.</h3><p>Designed an attack taxonomy and benchmark across nine Android accessibility attack pathways for Mobilerun and Mobile-Use. Experiments achieved attack success rates of 82% on Gemma4 and 54% on Qwen3.6.</p><a class="text-link" href="#publications">Related publication <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="work-card">
+          <div class="work-visual work-visual-two" aria-hidden="true"><div class="study-circle circle-one"></div><div class="study-circle circle-two"></div><div class="study-circle circle-three"></div><span class="visual-number">02</span></div>
+          <div class="card-meta"><span>NLP · MODEL FINE-TUNING</span><span>Kaggle project</span></div>
+          <h3>Translating Akkadian with LLMs.</h3><p>Built a dual-architecture translation pipeline with byte-level ByT5 and a 9B-parameter Tower+ model fine-tuned using PEFT/QLoRA. Developed memory-efficient inference across dual T4 GPUs using CPU offloading and BF16 mixed precision.</p>
+        </article>
+      </div>
+    </section>
+    <section id="education" class="section academic-section" aria-labelledby="education-title">
+      <div class="section-label"><span>05 / EDUCATION</span><h2 id="education-title">Building the <em>foundations.</em></h2></div>
+      <div class="entries">
+        <article class="entry"><p class="entry-date">AUG 2025 — PRESENT</p><h3>MSc in Cybersecurity &amp; AI</h3><p class="entry-institution">Radboud University · Nijmegen, Netherlands</p><p>GPA: 8.27/10</p><p class="entry-detail">Coursework: Security and Privacy of Machine Learning, Deep Learning, Online Tracking &amp; Privacy, Applied Cryptography, and Machine Learning in Practice.</p></article>
+        <article class="entry"><p class="entry-date">AUG 2017 — JUN 2021</p><h3>BE in Electronics &amp; Communication Engineering</h3><p class="entry-institution">BMS College of Engineering · Bangalore, India</p><p>GPA: 8.06/10</p></article>
+        <article class="entry"><p class="entry-date">MAR 2017</p><h3>Higher Secondary Education</h3><p class="entry-institution">Indian Public School · Kuwait</p><p>GPA: 8.42/10</p></article>
+      </div>
+    </section>
+    <section id="experience" class="section academic-section" aria-labelledby="experience-title">
+      <div class="section-label"><span>06 / EXPERIENCE</span><h2 id="experience-title">Research meets <em>practice.</em></h2></div>
+      <div class="entries">
+        <article class="entry"><p class="entry-date">JUL 2026 — PRESENT</p><h3>Research Intern</h3><p class="entry-institution">Digital Security Group (DiS), Radboud University</p><p class="entry-location">Nijmegen, Netherlands</p><p class="entry-detail">Researching the security of watermarking techniques used in large language models, focusing on their robustness against a novel substitution-based adversarial attack.</p></article>
+        <article class="entry"><p class="entry-date">AUG 2021 — AUG 2025</p><h3>Analyst · SAP ABAP</h3><p class="entry-institution">Deloitte Consulting USI</p><p class="entry-location">Bangalore, India</p><ul class="experience-points"><li>Developed and maintained business-critical SAP ABAP code for enterprise-scale systems under software development lifecycle and change control protocols.</li><li>Collaborated with global support teams on projects across geographies.</li><li>Performed root-cause analysis and resolved high-priority production incidents to minimize business disruption.</li></ul></article>
+      </div>
+    </section>
+    <section id="certifications" class="section academic-section" aria-labelledby="certifications-title">
+      <div class="section-label"><span>07 / CERTIFICATIONS &amp; SKILLS</span><h2 id="certifications-title">Tools of <em>the trade.</em></h2></div>
+      <div>
+        <div class="certifications"><span>CompTIA Security+</span><span>(ISC)² Certified in Cybersecurity (CC)</span></div>
+        <dl class="skills-list">
+          <div><dt>Security</dt><dd>LLM vulnerability assessment, adversarial robustness, prompt injection analysis</dd></div>
+          <div><dt>Languages</dt><dd>Python, C++, Bash, ABAP, LaTeX</dd></div>
+          <div><dt>AI &amp; machine learning</dt><dd>PyTorch, TensorFlow, Hugging Face, Transformers, PEFT, scikit-learn</dd></div>
+          <div><dt>Agents &amp; automation</dt><dd>OpenClaw, Mobilerun, Mobile-Use, Playwright</dd></div>
+          <div><dt>Developer tools</dt><dd>Git, VS Code, ADB</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section id="contact" class="closing" aria-labelledby="contact-title"><p class="eyebrow">08 / GET IN TOUCH</p><h2 id="contact-title">A good question starts <em>a conversation.</em></h2><p>I’m interested in research-focused opportunities at the intersection of security and AI.</p><a class="text-link" href="mailto:deiv.rahul@gmail.com">deiv.rahul@gmail.com <span aria-hidden="true">↗</span></a><div class="profile-links"><a href="https://www.linkedin.com/in/rahuldeiv/" rel="me" aria-label="LinkedIn profile" title="LinkedIn profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.99 0 3.58 1.97 3.58 4.53v5.24Z"/></svg></a><a href="https://github.com/rahuldeiv" rel="me" aria-label="GitHub profile" title="GitHub profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.3c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg></a><a href="https://x.com/rahuldeiv" rel="me" aria-label="X profile" title="X profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.835L0 1.154h7.594l5.243 6.932 6.064-6.933ZM17.61 20.644h2.039L6.486 3.24H4.298L17.61 20.644Z"/></svg></a><a href="mailto:deiv.rahul@gmail.com" aria-label="Email Rahul" title="Email Rahul"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg></a></div></section>
+  </main>
+  <footer class="site-footer wrap"><p>© 2026 Rahul Deivasigamani</p><p>Made with intention. Still becoming.</p><a href="#top" aria-label="Back to top">rd<span>.</span></a></footer>
+</body>
 </html>

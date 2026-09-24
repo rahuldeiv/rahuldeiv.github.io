@@ -1,6 +1,15 @@
 # rahuldeiv.com
 
-Temporary landing page for `rahuldeiv.com`, hosted with GitHub Pages.
+Personal website for `rahuldeiv.com`, hosted with GitHub Pages. A static, responsive page with a warm editorial design. No build step or third-party dependencies.
+
+## Edit and preview
+
+- `index.html` contains the page content. Content is derived from the supplied CV: biography, news, publication, projects, education, experience, certifications, skills, and contact. Update ongoing roles, GPA, and publication status here as they change.
+- `styles.css` contains the layout and palette, with color variables at the top.
+- `sample.html` is a design reference, not part of the homepage.
+- Keep `CNAME` intact to preserve the custom domain.
+
+Open `index.html` directly, or run `python3 -m http.server 8000` here and visit `http://localhost:8000`.
 
 ## Publish with GitHub Pages
 
