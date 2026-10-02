@@ -6,7 +6,7 @@ Personal website for `rahuldeiv.com`, hosted with GitHub Pages. A static, respon
 
 - `index.html` contains the page content. Content is derived from the supplied CV: biography, news, publication, projects, education, experience, certifications, skills, and contact. Update ongoing roles, GPA, and publication status here as they change.
 - `styles.css` contains the layout and palette, with color variables at the top.
-- `sample.html` is a design reference, not part of the homepage.
+- `layout.js` fits the desktop composition to a 1440 × 900 reference using both viewport dimensions and measures navigation heights. Desktop screens keep the two-column hero; screens up to 700px use the mobile layout.
 - Keep `CNAME` intact to preserve the custom domain.
 
 Open `index.html` directly, or run `python3 -m http.server 8000` here and visit `http://localhost:8000`.
